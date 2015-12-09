@@ -1,0 +1,58 @@
+<?php
+
+class v100_{{name}} extends package_migration {
+
+	public function up() {
+		$this->down();
+
+		/*
+		show_as - 0 Textarea, 1 Boolean T/F (value 'true'/'false'), 2 Radios (json), 3 Text Input (option width)
+		options - Radio {'name': 'value', 'name2': 'value2'}, text width 
+		*/
+		//$this->add_setting(['name'=>'Name','value'=>'value','help'=>'help here','show_as'=>1]);
+		
+		/* */
+		//$this->add_menu(['url'=>'/admin/reports/security','text'=>'Security Violations','parent_id'=>'Reports']);
+		
+		/* */
+		//$this->add_access(['name'=>'Manage Security Violations','description'=>'Full access to security violations']);
+		
+		/* */
+		//$this->add_symlink('/public/folder');
+		
+		/* Basic CRUD */
+		$this->add_menu_crud('{{single}}','{{plural}}','{{single}}','Content','/{{path}}');
+
+		{{ if has_table }}
+$this->query($this->table());
+		{{ endif }}
+
+		return true;
+	}
+
+	public function down() {
+		$this->remove_setting();
+		$this->remove_menu();
+		$this->remove_access();
+
+	{{ if has_table }}
+	$this->drop_table('{{ tablename }}');
+	{{ endif }}
+
+		return true;
+	}
+
+	{{ if has_table }}
+	public function table() {
+$table = <<<SQL
+	{{ table_create_sql }}
+SQL;
+
+		return $table;
+	}
+	{{ endif }}
+
+} /* end */
+
+
+

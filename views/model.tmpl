@@ -1,0 +1,19 @@
+<?php
+
+class {{model}} extends Database_model {
+	protected $table ='{{name}}';
+	{{ if primary_id != 'id' }}
+	protected $primary_key = '{{primary_id}}';
+	{{ endif }}
+
+	protected $rules = [
+		{{ model_fields_rules }}
+'{{ name }}' => ['field' => '{{ name }}', 'label' => '{{ human_name }}', 'rules' => '{{ rule }}'],
+		{{ /model_fields_rules }}
+	];
+	protected $rule_sets = [
+		'insert' => '{{ model_insert_rule }}',
+		'update' => '{{ model_update_rule }}',
+	];
+
+} /* end {{model}} class */

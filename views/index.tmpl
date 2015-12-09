@@ -1,0 +1,31 @@
+<?php
+theme::header_start('Manage {{plural}}','Manage all {{plural}}.');
+Plugin_search_sort::field();
+theme::header_button_new();
+theme::header_end();
+
+theme::table_start(['{{i_column1}}','{{i_column2}}','{{i_column3}}','{{i_column4}}','Actions'=>'text-center'],['tbody_class'=>'searchable','class'=>'sortable'],$records);
+
+foreach ($records as $record) {
+	theme::table_start_tr();
+	o::e($record->{{i_column_name1}});
+
+	theme::table_row();
+	o::e($record->{{i_column_name2}});
+
+	theme::table_row();
+	o::e($record->{{i_column_name3}});
+
+	theme::table_row();
+	o::e($record->{{i_column_name4}});
+
+	theme::table_row('actions text-center');
+	theme::table_action('edit',$this->controller_path.'/edit/'.$record->{{primary_id}});
+	o_dialog::confirm_a_delete($this->controller_path.'/delete/'.$record->{{primary_id}});
+
+	theme::table_end_tr();
+}
+
+theme::table_end();
+
+theme::return_to_top();

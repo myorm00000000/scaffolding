@@ -1,0 +1,25 @@
+<?php
+theme::form_start($controller_path.'/'.$controller_action,$record->{{primary_id}});
+theme::header_start(ucfirst($controller_action).' '.$controller_title);
+theme::header_end();
+
+o::hr(0,12);
+
+{{ form_fields }}
+
+theme::start_form_section('{{ fieldtext }}');
+o::text('{{ fieldname }}', $record->{{ fieldname }});
+theme::end_form_section();
+{{ /form_fields }}
+
+o::view_event($controller_path,'form.footer');
+
+o::hr(0,12);
+
+theme::footer_start();
+theme::footer_cancel_button($controller_path);
+theme::footer_submit_button();
+theme::footer_required();
+theme::footer_end();
+
+theme::form_end();
