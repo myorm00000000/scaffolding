@@ -18,7 +18,8 @@
     "require": {
         "php": ">=5.5",
         "projectorangebox/orange": "dev-master",
-        "projectorangebox/theme-orange": "dev-master"
+        "projectorangebox/theme-orange": "dev-master",
+        "pyrocms/lex": "2.2.*"
     },
     "orange": {
         "version": "1.0.0",
