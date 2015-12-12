@@ -26,7 +26,10 @@
         "type": "package",
         "priority": 50,
         "notes": "",
-        "cli": {},
+        "cli": {
+					"model/create": "Create Model files",
+					"package/create": "Create a package ie. package/create admin/content/example"
+        },
         "help": "",
         "tables": "",
         "access": "",

@@ -46,7 +46,8 @@ class packageCliController extends O_CliController {
 
 		$this->model($filename,$data);
 		$this->view($filename,$data);
-
+		
+		$data['controller'] = ucfirst(strtolower(str_replace('-','_',$filename)));
 		$data['uname'] = ucfirst(strtolower($filename));
 		$data['lname'] = strtolower($filename);
 		$data['path'] = trim($path,'/');
