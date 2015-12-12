@@ -1,8 +1,8 @@
 <?php
 
-class packageCliController extends O_CliController {
+class createCliController extends O_CliController {
 
-	public function createCliAction($path=null) {
+	public function packageCliAction($path=null) {
 		$this->load->helper('inflector');
 
 		if (!$path) {
