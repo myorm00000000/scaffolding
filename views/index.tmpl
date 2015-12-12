@@ -4,7 +4,7 @@ Plugin_search_sort::field();
 theme::header_button_new();
 theme::header_end();
 
-theme::table_start(['{{i_column1}}','{{i_column2}}','{{i_column3}}','{{i_column4}}','Actions'=>'text-center'],['tbody_class'=>'searchable','class'=>'sortable'],$records);
+theme::table_start(['{{i_column1}}','{{i_column2}}','{{i_column3}}','{{i_column4}}','Actions'=>'text-center'],[],$records);
 
 foreach ($records as $record) {
 	theme::table_start_tr();
