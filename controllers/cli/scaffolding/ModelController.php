@@ -1,6 +1,6 @@
 <?php
 
-class modelCliController extends O_CliController {
+class modelController extends O_CliController {
 
 	public function createCliAction($prefix='') {
 		mkdir($_ENV['HOME'].'/Desktop/models');

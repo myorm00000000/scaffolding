@@ -27,8 +27,8 @@
         "priority": 50,
         "notes": "",
         "cli": {
-					"model/create": "Create Model files",
-					"create/package": "Create a package ie. package/create admin/content/example"
+					"cli/scaffolding/model/create": "Create Model files",
+					"cli/scaffolding/create/package": "Create a package ie. package/create admin/content/example"
         },
         "help": "",
         "tables": "",
