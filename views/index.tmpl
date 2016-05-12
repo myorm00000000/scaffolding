@@ -1,7 +1,7 @@
 <?php
 theme::header_start('Manage '.$controller_titles,'Manage all '.$controller_titles.'.');
 Plugin_search_sort::field();
-theme::header_button_new();
+theme::header_button('new');
 theme::header_end();
 
 theme::table_start(['{{i_column1}}','{{i_column2}}','{{i_column3}}','{{i_column4}}','Actions'=>'text-center'],[],$records);
