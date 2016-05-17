@@ -4,18 +4,18 @@ theme::header_start(ucfirst($controller_action).' '.$controller_title);
 theme::header_button('cancel');
 theme::header_end();
 
-o::hr(0,12);
+theme::hr(0,12);
 
 {{ form_fields }}
 
 theme::start_form_section('{{ fieldtext }}');
-o::text('{{ fieldname }}', $record->{{ fieldname }});
+theme::text('{{ fieldname }}', $record->{{ fieldname }});
 theme::end_form_section();
 {{ /form_fields }}
 
 o::view_event($controller_path,'form.footer');
 
-o::hr(0,12);
+theme::hr(0,12);
 
 theme::footer_start();
 theme::footer_required();
