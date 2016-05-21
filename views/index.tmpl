@@ -8,16 +8,16 @@ theme::table_start(['{{i_column1}}','{{i_column2}}','{{i_column3}}','{{i_column4
 
 foreach ($records as $record) {
 	theme::table_start_tr();
-	o::e($record->{{i_column_name1}});
+	theme::e($record->{{i_column_name1}});
 
 	theme::table_row();
-	o::e($record->{{i_column_name2}});
+	theme::e($record->{{i_column_name2}});
 
 	theme::table_row();
-	o::e($record->{{i_column_name3}});
+	theme::e($record->{{i_column_name3}});
 
 	theme::table_row();
-	o::e($record->{{i_column_name4}});
+	theme::e($record->{{i_column_name4}});
 
 	theme::table_row('actions text-center');
 	theme::table_action('edit',$this->controller_path.'/edit/'.$record->{{primary_id}});
