@@ -24,7 +24,7 @@
     "orange": {
         "version": "1.0.0",
         "type": "package",
-        "priority": 50,
+        "priority": 110,
         "notes": "",
         "cli": {
 					"cli/scaffolding/model/create": "Create Model files",
