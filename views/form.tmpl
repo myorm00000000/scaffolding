@@ -13,7 +13,7 @@ theme::text('{{ fieldname }}', $record->{{ fieldname }});
 theme::end_form_section();
 {{ /form_fields }}
 
-theme::view_event($controller_path,'form.footer');
+trigger('view.'.$controller_path,'form.footer');
 
 theme::hr(0,12);
 
